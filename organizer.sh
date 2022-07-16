@@ -47,10 +47,10 @@ aux=${vetor_arquivos[i]}
 ext=${aux##*.}
 
 case "$ext" in
-                     mp3) mv "$aux" "$1"/audios ;;
+      ogg | mp3) mv "$aux" "$1"/audios ;;
                      mp4) mv "$aux" "$1"/videos  ;;
 png | jpeg | jpg |  webp) mv "$aux" "$1"/imagens  ;;
-     doc | pdf | odt | docx) mv "$aux" "$1"/documentos  ;;
+xlsx | doc | pdf | odt | docx) mv "$aux" "$1"/documentos  ;;
 kml | kmz | sql| py | sh) mv "$aux" "$1"/scripts/ ;;
                zip | tar) mv "$aux" "$1"/compactados ;;
 esac
